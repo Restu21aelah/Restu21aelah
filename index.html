@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form validasi</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width = device-width, initial-scale= 1.0">
+  </head>
+  <body>
+    <form method="POST">
+
+      <div class="container">
+      	<h2 style="text-align:center">Form validasi</h2>
+        <label>Nama</label>
+           <input type="text" id="first_name" name="first_name" value="" autocomplete="off" placeholder="Nama anda" pattern="[A-Za-z ]*" required>
+      </div>
+
+      <div class="container">
+        <label for="usia">Usia</label>
+        <input min="17" max="30" placeholder="17-30 tahun" type="number" name="usia" id="usia" autocomplete="off" required>
+      </div>
+
+      <div class="container">
+        <label for="email">Email</label>
+        <input autocomplete="off" type="text" name="email" id="email" placeholder="Nama_email@host.com" required>
+      </div>
+
+      <div class="container">
+        <label for="password">Password</label>
+        <input minlength="8" autocomplete="off" type="password" name="password" id="password" placeholder="Minimal 8 karakter"  required>
+      </div>
+
+      <div class="container">
+        <label for="website">Website</label>
+        <input required autocomplete="off" type="text" name="website" id="website" placeholder="http://">
+      </div>
+      
+      <div class="container">
+        <button type="submit" name="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- password_hash($password, PASSWORD_BCRYPT) -->
